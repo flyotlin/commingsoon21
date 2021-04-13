@@ -14,10 +14,6 @@ router.get('/', function(req, res, next) {
   diff %= 60;
 
   let renderOptions = ['julia', 'hua', 'harden', 'jin'];
-  // let renderOptions = ['julia'];
-  // let renderOptions = ['hua'];
-  // let renderOptions = ['harden'];
-  // let renderOptions = ['jin'];
   let chosen = remainDays % renderOptions.length;
   res.render(renderOptions[chosen], { 
     title: '2021中央大學新生知訊網' ,
