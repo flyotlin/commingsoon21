@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="shortcut icon" type="image/jpg" href="/images/favicon.png"/>
+
+    <script defer src="/fontawesome/js/brands.js"></script>
+    <script defer src="/fontawesome/js/solid.js"></script>
+    <script defer src="/fontawesome/js/fontawesome.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* background: linear-gradient(45deg, white, transparent); */
+            background: #dcdcdc59;
+        }
+
+        #container {
+            position: relative;
+        }
+
+        #bg-img {
+            max-width: 99%;
+            max-height: 100vh;
+            height: auto;
+        }
+
+        .icon {
+            position: absolute;
+            right: 50%;
+            bottom: 7%;
+            font-size: xxx-large;
+        }
+
+        #count_days {
+            position: absolute;
+            bottom: 11.6%;
+            right: 29.1%;
+            font-weight: bold;
+            font-size: 5rem;
+        }
+
+        @media(max-width: 992px) {
+            .icon {
+                font-size: 2rem;
+            }
+            #count_days {
+                font-size: 2.9rem;
+            }
+        }
+
+        @media(max-width: 768px) {
+            .icon {
+                font-size: 1.3rem;
+            }
+            #count_days {
+                font-size: 2rem;
+                right: 29%;
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+        <img id="bg-img" src="/images/julia.png" alt="">
+        <span id="count_days"><%= countDownDays %></span>
+        <a class="icon" style="right: 25.4%; bottom: 4%;" href="https://www.instagram.com/ncufresh/"><i class="fab fa-instagram "></i></a>
+        <a class="icon" style="right: 21.2%; bottom: 4%;" href="https://www.facebook.com/ncufreshweb"><i class="fab fa-facebook "></i></a>
+    </div>
+  </body>
+</html>
